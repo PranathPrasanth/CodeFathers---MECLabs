@@ -1,0 +1,54 @@
+/* Container for vertical tabs */
+.vertical-tabs-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Common styles for tabs */
+  .tab {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Top tab styles */
+  .top-tab {
+    background: linear-gradient(45deg, #7b1fa2, #9c27b0); /* Violet gradient */
+    border-bottom: 2px solid #fff;
+  }
+  
+  /* Bottom tab styles */
+  .bottom-tab {
+    background: linear-gradient(45deg, #ffffff, #f3e5f5); /* White to light violet gradient */
+    color: #7b1fa2; /* Violet text for contrast */
+    border-top: 2px solid #7b1fa2;
+  }
+  
+  /* Hover effect */
+  .tab:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Link inside tabs */
+  .tab-link {
+    color: inherit; /* Inherit text color based on tab */
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  

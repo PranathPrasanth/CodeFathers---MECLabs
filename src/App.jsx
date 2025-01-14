@@ -3,13 +3,22 @@ import ListGroup from "./components/ListGroup";
 import Home from "./components/homepage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Component for the main page
-import GetStarted from "./components/GetStarted"; // Component for the "Get Started" page
+import GetStarted from "./components/GetStarted";
+ // Component for the "Get Started" page
+ import Login from "./components/Login";
+import Signup from "./components/Signup";
+import TwoComponent from "./components/TwoComponent";
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/get-started" element={<GetStarted />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/twocomponent" element={<TwoComponent />} />
+        
+
       </Routes>
     </Router>
 
