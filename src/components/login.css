@@ -1,0 +1,89 @@
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .login-input-group {
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .login-input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .login-input-group input:focus {
+    border-color: #6200ea;
+  }
+  
+  .login-input-group label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #999;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .login-input-group input:focus + label,
+  .login-input-group input:not(:placeholder-shown) + label {
+    top: 5px;
+    font-size: 12px;
+    color: #6200ea;
+  }
+  
+  .login-button-group {
+    margin-top: 20px;
+  }
+  
+  .login-btn,
+  .signup-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6200ea;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+  }
+  
+  .login-btn:hover,
+  .signup-btn:hover {
+    background-color: #4500b0;
+  }
+  
+  .forgot-password {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .forgot-password a {
+    color: #6200ea;
+    text-decoration: none;
+  }
+  
+  .forgot-password a:hover {
+    text-decoration: underline;
+  }
+  
