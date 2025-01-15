@@ -8,6 +8,7 @@ import GetStarted from "./components/GetStarted";
  import Login from "./components/Login";
 import Signup from "./components/Signup";
 import TwoComponent from "./components/TwoComponent";
+import PersonalizedTest from "./components/personalizedtext";
 function App() {
   return (
     <Router>
@@ -17,7 +18,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/twocomponent" element={<TwoComponent />} />
-        
+        <Route path="/personalized-test" element={<PersonalizedTest />} />
 
       </Routes>
     </Router>
