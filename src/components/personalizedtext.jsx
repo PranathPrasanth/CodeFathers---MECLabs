@@ -5,17 +5,20 @@ const questions = [
   { 
     id: 'background', 
     label: "What's your educational or professional background?",
-    type: 'textarea'
+    type: 'radio',
+    options: ['High School', 'Undergraduate', 'Postgraduate', 'Professional']
   },
   { 
     id: 'goals', 
     label: "What are your primary learning or career goals?",
-    type: 'textarea'
+    type: 'radio',
+    options: ['Career Advancement', 'Skill Development', 'Networking', 'Personal Growth']
   },
   { 
     id: 'interests', 
     label: "What topics or skills are you most interested in developing?",
-    type: 'textarea'
+    type: 'radio',
+    options: ['Programming', 'Data Science', 'Design', 'Management']
   },
   { 
     id: 'learning_style', 
@@ -32,7 +35,8 @@ const questions = [
   { 
     id: 'challenges', 
     label: "What are your biggest challenges or obstacles in learning?",
-    type: 'textarea'
+    type: 'radio',
+    options: ['Time Management', 'Lack of Resources', 'Motivation', 'Other']
   },
   { 
     id: 'experience_level', 
@@ -42,36 +46,35 @@ const questions = [
   }
 ];
 
-const personalizedtext = () => {
+const PersonalizedText = () => {
   const [activeTab, setActiveTab] = useState(questions[0].id);
   const [formData, setFormData] = useState({});
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+  const [isOptionSelected, setIsOptionSelected] = useState(false);
 
   const handleRadioChange = (name, value) => {
     setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form data submitted:', formData);
-    alert('Questionnaire submitted successfully! Your personalized AI mentor session will be prepared.');
-    setFormData({});
-    setActiveTab(questions[0].id);
+    setIsOptionSelected(true);
   };
 
   const goToNextTab = () => {
     const currentIndex = questions.findIndex((q) => q.id === activeTab);
     if (currentIndex < questions.length - 1) {
       setActiveTab(questions[currentIndex + 1].id);
+      setIsOptionSelected(false);
+    } else {
+      handleSubmit();
     }
   };
 
+  const handleSubmit = () => {
+    console.log('Form data submitted:', formData);
+    alert('Questionnaire submitted successfully! Your personalized AI mentor session will be prepared.');
+    setFormData({});
+    setActiveTab(questions[0].id);
+  };
+
   return (
-    <form onSubmit={handleSubmit} className="mentor-ai-questionnaire">
+    <form className="mentor-ai-questionnaire">
       <h2>AI Mentor Personalization Questionnaire</h2>
       <div className="tabs">
         {questions.map((q, index) => (
@@ -88,56 +91,33 @@ const personalizedtext = () => {
       {questions.map((q) => (
         <div key={q.id} className={`tab-content ${activeTab === q.id ? 'active' : ''}`}>
           <label htmlFor={q.id}>{q.label}</label>
-          {q.type === 'textarea' ? (
-            <textarea
-              id={q.id}
-              name={q.id}
-              value={formData[q.id] || ''}
-              onChange={handleInputChange}
-              rows={4}
-            />
-          ) : q.type === 'radio' ? (
-            <div className="radio-group">
-              {q.options.map((option) => (
-                <div key={option} className="radio-option">
-                  <input
-                    type="radio"
-                    id={`${q.id}-${option}`}
-                    name={q.id}
-                    value={option}
-                    checked={formData[q.id] === option}
-                    onChange={() => handleRadioChange(q.id, option)}
-                  />
-                  <label htmlFor={`${q.id}-${option}`}>{option}</label>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <input
-              type="text"
-              id={q.id}
-              name={q.id}
-              value={formData[q.id] || ''}
-              onChange={handleInputChange}
-            />
-          )}
+          <div className="radio-group">
+            {q.options.map((option) => (
+              <div key={option} className="radio-option">
+                <input
+                  type="radio"
+                  id={`${q.id}-${option}`}
+                  name={q.id}
+                  value={option}
+                  checked={formData[q.id] === option}
+                  onChange={() => handleRadioChange(q.id, option)}
+                />
+                <label htmlFor={`${q.id}-${option}`}>{option}</label>
+              </div>
+            ))}
+          </div>
+          <button
+            type="button"
+            className="next-button"
+            onClick={goToNextTab}
+            disabled={!isOptionSelected}
+          >
+            Next
+          </button>
         </div>
       ))}
-      <div className="button-group">
-        <button
-          type="button"
-          onClick={goToNextTab}
-          disabled={activeTab === questions[questions.length - 1].id}
-          className="next-button"
-        >
-          Next
-        </button>
-        <button type="submit" className="submit-button">
-          Submit
-        </button>
-      </div>
     </form>
   );
 };
 
-export default personalizedtext;
+export default PersonalizedText;
