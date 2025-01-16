@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaBrain, FaCode, FaRocket, FaBolt, FaBars, FaTimes } from 'react-icons/fa';
 import './HomePage.css';
+import { FaPen } from 'react-icons/fa6';
 
 const HomePage = () => {
   const [email, setEmail] = useState('');
@@ -29,10 +30,12 @@ const HomePage = () => {
               <li><a href="#features" onClick={() => setIsMenuOpen(false)}>Features</a></li>
               <li><a href="#about" onClick={() => setIsMenuOpen(false)}>About</a></li>
               <li><a href="#pricing" onClick={() => setIsMenuOpen(false)}>Pricing</a></li>
-              <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a></li>
+              <li><a href="#contact" onClick={() => setIsMenuOpen(false)}>Sign Up</a></li>
+              <li><a href="/login" onClick={() => setIsMenuOpen(false)}>Log In</a></li>
             </ul>
           </nav>
-        </div>
+          
+                  </div>
       </header>
 
       <main>
@@ -57,7 +60,7 @@ const HomePage = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <a href="/get-started" className="cta-button">Get Started</a>
+              <a href="/login" className="cta-button">Get Started</a>
             </motion.div>
           </div>
         </section>
@@ -72,8 +75,8 @@ const HomePage = () => {
                 description="Get immediate responses to your questions, anytime." 
               />
               <FeatureCard 
-                icon={<FaCode />} 
-                title="Coding Assistance" 
+                icon={<FaPen />} 
+                title="Personalized Support" 
                 description="Receive help with coding challenges and debugging." 
               />
               <FeatureCard 
@@ -112,7 +115,7 @@ const HomePage = () => {
           </div>
         </section>
 
-        <section id="pricing" className="pricing">
+        {/* <section id="pricing" className="pricing">
           <div className="container">
             <h2>Choose Your Plan</h2>
             <div className="pricing-grid">
@@ -134,7 +137,7 @@ const HomePage = () => {
               />
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section id="contact" className="contact">
           <div className="container">
