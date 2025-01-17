@@ -9,6 +9,7 @@ import GetStarted from "./components/GetStarted";
 import Signup from "./components/Signup";
 import TwoComponent from "./components/TwoComponent";
 import PersonalizedTest from "./components/personalizedtext";
+import Prompt from "./components/promptpage";
 function App() {
   return (
     <Router>
@@ -19,6 +20,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/twocomponent" element={<TwoComponent />} />
         <Route path="/personalized-test" element={<PersonalizedTest />} />
+        <Route path="/other-feature" element={<Prompt />} />
 
       </Routes>
     </Router>
