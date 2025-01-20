@@ -1,14 +1,14 @@
 # ElevAIte: Mentor AI Website
 
 ## Project Overview
-Elevate is an AI-powered mentorship website designed to provide personalized guidance and resources to users. The website features a user-friendly interface with options for personalized testing and other features aimed at enhancing the learning experience.
+ElevAIte is an AI-powered mentorship website designed to provide personalized guidance and resources to users. The website features a user-friendly interface with options for personalized testing and other features aimed at enhancing the learning experience.
 
 ---
 
 ## Features
 
 ### 1. Homepage
-- *Purpose*: The entry point for the website, providing a brief introduction to Elevate and its features.
+- *Purpose*: The entry point for the website, providing a brief introduction to ElevAIte and its features.
 - *Components*:
   - A clear and engaging welcome message.
   - A login button for users to access the platform.
@@ -96,7 +96,7 @@ Elevate is an AI-powered mentorship website designed to provide personalized gui
 ---
 
 ## Contribution
-We welcome contributions to Elevate. To contribute:
+We welcome contributions to ElevAIte. To contribute:
 1. Fork the repository.
 2. Create a new branch for your feature or bugfix.
 3. Submit a pull request for review.
