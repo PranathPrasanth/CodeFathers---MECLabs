@@ -97,7 +97,7 @@ const HomePage = () => {
           <div className="container">
             <div className="about-content">
               <div className="about-image">
-                <img src="/placeholder.svg?height=400&width=600" alt="AI Mentor Dashboard" />
+                <img src="img.jpg" alt="AI Mentor Dashboard" />
               </div>
               <div className="about-text">
                 <h2>Experience the Future of Learning</h2>
