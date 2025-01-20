@@ -1,4 +1,4 @@
-# Elevate: Mentor AI Website
+# ElevAIte: Mentor AI Website
 
 ## Project Overview
 Elevate is an AI-powered mentorship website designed to provide personalized guidance and resources to users. The website features a user-friendly interface with options for personalized testing and other features aimed at enhancing the learning experience.
@@ -42,7 +42,7 @@ Elevate is an AI-powered mentorship website designed to provide personalized gui
 ---
 
 ## Technology Stack
-- *Frontend*: HTML, CSS, JavaScript,react.js
+- *Frontend*: HTML, CSS, JavaScript,React.js
 - *Backend*: Python (Flask/Django) or Node.js
 - *Database*: MongoDB, MySQL, or similar
 - *AI/ML*: OpenAI API or custom AI models for personalized tests and prompt responses
@@ -107,5 +107,5 @@ We welcome contributions to Elevate. To contribute:
 ---
 
 ## Contact
-For any questions or suggestions, please contact us at [email@example.com].
+For any questions or suggestions, please contact us at [pranathp05@gmail.com ].
 
