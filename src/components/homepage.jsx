@@ -67,7 +67,7 @@ const HomePage = () => {
 
         <section id="features" className="features">
           <div className="container">
-            <h2>Why Choose AI Mentor?</h2>
+            <h2>Why Choose ElevAIte?</h2>
             <div className="feature-grid">
               <FeatureCard 
                 icon={<FaBolt />} 
@@ -142,7 +142,7 @@ const HomePage = () => {
         <section id="contact" className="contact">
           <div className="container">
             <h2>Ready to Start Your Journey?</h2>
-            <p>Join thousands of learners who have accelerated their growth with AI Mentor.</p>
+            <p>Join thousands of learners who have accelerated their growth with ElevAIte.</p>
             <form onSubmit={handleSubmit}>
               <input
                 type="email"
@@ -161,7 +161,7 @@ const HomePage = () => {
         <div className="container">
           <div className="footer-content">
             <div className="footer-section">
-              <h3>AI Mentor</h3>
+              <h3>ElevAIte</h3>
               <p>Empowering learners worldwide with AI-driven mentorship.</p>
             </div>
             <div className="footer-section">
@@ -184,7 +184,7 @@ const HomePage = () => {
             </div>
           </div>
           <div className="footer-bottom">
-            <p>&copy; 2024 AI Mentor. All rights reserved.</p>
+            <p>&copy; 2024 ElevAIte. All rights reserved.</p>
           </div>
         </div>
       </footer>

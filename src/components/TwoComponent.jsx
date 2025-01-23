@@ -12,7 +12,7 @@ function TwoComponent() {
           </div>
           <div className="tab1 bottom-tab">
             <Link to="/other-feature" className="tab-link">
-              Other Feature
+              Chat with AI
             </Link>
           </div>
         </div>
