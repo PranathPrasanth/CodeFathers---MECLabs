@@ -75,7 +75,7 @@ const PersonalizedText = () => {
 
   return (
     <form className="mentor-ai-questionnaire">
-      <h2>AI Mentor Personalization Questionnaire</h2>
+      <h2>ElevAIte Personalization Questionnaire</h2>
       <div className="tabs">
         {questions.map((q, index) => (
           <button

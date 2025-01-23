@@ -5,7 +5,7 @@ import "./login.css";
 function Login() {
   return (
     <div className="login-container">
-      <h1>AI Mentor Login</h1>
+      <h1>ElevAIte Login</h1>
       <form action="#" method="post">
         <div className="login-input-group">
           <input type="email" id="login-email" name="email" required />
