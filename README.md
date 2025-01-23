@@ -73,7 +73,7 @@ ElevAIte is an AI-powered mentorship website designed to provide personalized gu
 
 5. Open the website in your browser:
    
-   http://localhost:5000
+   http://localhost:5173
    
 
 ---

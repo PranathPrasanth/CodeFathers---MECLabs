@@ -20,7 +20,7 @@ const HomePage = () => {
         <div className="container">
           <div className="logo">
             <FaBrain className="logo-icon" />
-            <span>AI Mentor</span>
+            <span>ElevAIte</span>
           </div>
           <nav className={isMenuOpen ? 'open' : ''}>
             <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
